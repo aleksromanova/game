@@ -1,0 +1,58 @@
+html *
+{
+    font-size: x-large;
+    font-family: "Apple LiGothic";
+}
+#rules {
+    text-align: center;
+    border: 3px solid dodgerblue;
+    margin: auto;
+    width: 50%;
+    padding: 20px;
+}
+
+#login, #game {
+    text-align: center;
+    margin: auto;
+    width: 50%;
+    padding: 50px;
+}
+
+#name {
+    margin: 10px;
+}
+
+#welcome {
+    font-size: xx-large;
+}
+
+#board {
+    align-content: center;
+}
+
+.firstPlayerPit, #pit6 {
+    background-color: lightpink;
+}
+
+.secondPlayerPit, #pit13 {
+    background-color: lightblue;
+}
+
+.firstPlayerPit, .secondPlayerPit {
+    width: 100px;
+    height: 100px;
+}
+
+#pit6, #pit13 {
+    width: 100px;
+    height: 200px;
+}
+
+.firstPlayerPit, .secondPlayerPit, #pit6, #pit13 {
+    font-size: x-large;
+    border: 5px solid white;
+}
+
+#next{
+    padding: 50px;
+}

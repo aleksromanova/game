@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Game</title>
+    <link rel="stylesheet" type="text/css" th:href="@{css/game.css}"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script th:src="@{js/game.js}"></script>
+</head>
+<body>
+<div id="login">
+    <div id="welcome">Welcome to game!</div>
+    <div>
+        <label for="name">Please input your name:</label>
+        <br/>
+        <input type="text" id="name"/>
+        <br/>
+        <button id="start">Start</button>
+    </div>
+</div>
+<div id="game" hidden>
+    <div id="next">
+        <span>Next turn:</span><span id="nextPlayer"></span>
+    </div>
+    <div id="first">
+        <span id="player1"></span>
+    </div>
+    <div>
+        <table id="board">
+            <tr>
+                <td rowspan="2" id="pit6">0</td>
+                <td id="pit5" class="firstPlayerPit">0</td>
+                <td id="pit4" class="firstPlayerPit">0</td>
+                <td id="pit3" class="firstPlayerPit">0</td>
+                <td id="pit2" class="firstPlayerPit">0</td>
+                <td id="pit1" class="firstPlayerPit">0</td>
+                <td id="pit0" class="firstPlayerPit">0</td>
+                <td rowspan="2" id="pit13">0</td>
+            </tr>
+            <tr>
+                <td id="pit7" class="secondPlayerPit">0</td>
+                <td id="pit8" class="secondPlayerPit">0</td>
+                <td id="pit9" class="secondPlayerPit">0</td>
+                <td id="pit10" class="secondPlayerPit">0</td>
+                <td id="pit11" class="secondPlayerPit">0</td>
+                <td id="pit12" class="secondPlayerPit">0</td>
+            </tr>
+
+        </table>
+    </div>
+    <div id="second">
+        <span id="player2"></span>
+    </div>
+</div>
+<div id="rules">
+    <h1>Rules</h1>
+    <text>
+        <b>Game Play</b>
+        <br/>
+        The player who begins with the first move picks up all the stones in any of his own six pits, and sows the stones on to the right, one in each of the following pits, including his own big pit. No stones are put in the opponents' big pit. If the player's last stone lands in his own big pit, he gets another turn. This can be repeated several times before it's the other player's turn.
+        <br/>
+        <b>Capturing Stones</b>
+        <br/>
+        During the game the pits are emptied on both sides. Always when the last stone lands in an own empty pit, the player captures his own stone and all stones in the opposite pit (the other player’s pit) and puts them in his own big pit.
+        <br/>
+        <b>The Game Ends</b>
+        <br/>
+        The game is over as soon as one of the sides runs out of stones. The player who still has stones in his pits keeps them and puts them in his big pit. The winner of the game is the player who has the most stones in his big pit.
+    </text>
+</div>
+</body>
+</html>
